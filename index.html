@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet'>
+<head>
+  <title>RSVP - Satin Skies Album Launch</title>
+  <style>
+    *, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+    body {
+        padding: 20px;
+        background-color: #F3DBC6;
+        font-family: 'Forum', sans-serif;
+        color: #2D1B10;
+        overflow-x: hidden;
+    }
+
+    label, p {
+        font-size: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h2, h3, legend {
+        font-stretch: condensed;
+        font-family: 'Cormorant Garamond', Times, serif;
+        color: #6A2723;
+    }
+
+    legend {
+        font-size: 24px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .headers {
+        line-height: 10px;
+        margin-bottom: 40px;
+    }
+
+    form {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    fieldset {
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .concrat {
+        line-height: 30px;
+    }
+
+    .personalinfo, input[type="text"], input[type="email"], input[type="number"], input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-family: 'Forum', sans-serif;
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-family: 'Forum', sans-serif;
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    @media (min-width: 992px){
+        textarea, #dessertTable {
+            width: 80%; 
+            max-width: 80%;
+        }
+    }
+
+    select {
+        width: 70%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid black;
+        border-radius: 4px;
+        font-family: 'Forum', sans-serif;
+        font-size: 18px;
+        max-width: 70%;
+    }
+
+    @media (min-width: 992px){
+        select {
+            width: 50%; 
+            max-width: 50%;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 20px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 7.5px;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    th {
+        background-color: #6A2723;
+        color: white;
+        border: 1px solid #2D1B10;
+        font-family: 'Cormorant Garamond', sans-serif;
+    }
+
+    td {
+        border: 1px solid #2D1B10;
+    }
+
+    .responsive-table {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .buttons {
+        padding: 10px 20px;
+        background-color: #6A2723;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Cormorant Garamond', sans-serif;
+        font-size: 20px;
+    }
+
+    .buttonsgrp {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    button {
+        font-weight: bold;
+    }
+
+    .rsvp-body {
+        background-color: #F8F2EC;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .logo {
+        max-width: 35%;
+        height: auto;
+    }
+
+
+    .persoinfo_table td{
+        border: none;
+    }
+
+    .persoinfo_table{
+        border: none;             
+        border-collapse: collapse; 
+        width: 100%;              
+        max-width: 720px;          
+        margin: 0 auto;           
+    }
+
+    .album-cover {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .albums {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .item {
+      border: 1px solid #2D1B10;
+      padding: 10px;
+      background: #F5F3EB;
+      text-align: center;
+      border-radius: 10px;
+      width: 250px;
+      align-items: center;
+
+    }
+
+   .item img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .descs {
+      line-height: 5px;
+    } 
+
+    a {
+        color: #2D1B10;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #6A2723;
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <center>    
+        <img src="https://github.com/03yolo/satin-skies-rsvp/blob/main/sabrina-carpenter-logo.png?raw=true" alt="Sabrina Carpenter Logo" width="auto" height="75" class="logo">
+    </center>
+    <div class="rsvp-body">
+        <center>    
+            <img src="https://github.com/03yolo/satin-skies-rsvp/blob/main/satin-skies-mockup.png?raw=true" alt="Satin Skies Album" width="auto" height="200" class="album-cover">
+        </center>
+        <div class="headers">
+            <h2>Satin Skies Album Launch</h2>
+            <h3>July 26, 2025 | Cove Manila, Okada Manila</h3>
+        </div>
+        <p><b>Hello there, Carpenter!</b> Thank you for your love and continuous support for our girl Sabrina.<br> 
+            With that, we would love to invite you to the album launch of "Satin Skies," Sabrina Carpenter's newest album!<br>
+        Register your details here. Contact us for more inquiries! <br><br><i>With love, Team Sabrina</i></p>
+        <br>
+        <fieldset>
+            <legend>Before we reach the <i>Satin Skies,</i> listen to Sabrina Carpenter's previous projects!</legend>
+            <div class="albums">
+                <div class="item">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2730f45623be014a592a5815827" />
+                    <div class="descs">
+                        <h3><a href="https://youtube.com/playlist?list=OLAK5uy_kKGasq4eOgKfny6vbTjfNV9FDM7LSAu3c&si=CPnJX1l_2OlOL0_-" target="_blank">emails i can't send fwd:</a></h3>
+                        <p>Album · 2023</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Sabrina_Carpenter_-_Please_Please_Please.png" />
+                    <div class="descs">
+                        <h3><a href="https://youtu.be/cF1Na4AIecM?si=hGTLUyC6xc5ZiWzF" target="_blank">Please Please Please</a></h3>
+                        <p>Single · 2024</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273047d6b756e8f5e3f8b50f025" />
+                    <div class="descs">
+                        <h3><a href="https://youtube.com/playlist?list=PL8H_E4PKh5BXZoNUORUfjOd-SgQ_qT-Md&si=J_g1IlNlttJJW2bX" target="_blank">Short n' Sweet (Deluxe)</a></h3>
+                        <p>Album · 2025</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273062c6573009fdebd43de443b" />
+                    <div class="descs">
+                        <h3><a href="https://youtu.be/aSugSGCC12I?si=ZSfi3T01quGhxdJv" target="_blank">Manchild</a></h3>
+                        <p>Single · 2025</p>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        
+      <form id="rsvpSatinSkies">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <table class="persoinfo_table">
+            <tr>
+                <td class="table_label">Full Name:</td>
+                <td><input type="text" name="name" id="name" class="personalinfo" required></td>
+            </tr>
+            <tr>
+                <td>Email Address:</td>
+                <td><input type="email" name="email" id="email" class="personalinfo" required></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" name="age" id="age" min="18" max="100" class="personalinfo" required></td>
+            </tr>
+            <tr>
+                <td>Home Address:</td>
+                <td><input type="text" name="address" id="address" class="personalinfo" required></td>
+            </tr>
+            <tr>
+                <td>Primary Contact Number:</td>
+                <td><input type="tel" name="contactnum" id="contactnum" class="personalinfo" required></td>
+            </tr>
+          </table>
+          <p><i>Please make sure that the information you entered is correct.</i></p>
+        </fieldset>
+        <br>
+
+        <fieldset class="complidess">
+            <p><i>Let's keep our event the sweetest!</i> 
+            <br>Choose from a variety of desserts, 
+            <b>hand-picked by Sabrina Carpenter herself.</b><br>
+            Choose one, <u>it's on us!</u></p>
+            <legend>Complimentary Dessert</legend>
+            <center>
+                <div class="responsive-table">
+                    <table id="dessertTable">
+                        <thead>
+                            <tr>
+                                <th>Dessert Option</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table><br>
+                </div><br>
+
+                <label for="dessertSelect">Choose a complimentary dessert</label><br><br>
+                <input type="radio" name="dessert" value="Chocolate Chip Cookie">Chocolate Chip Cookie<br>
+                <input type="radio" name="dessert" value="M&M Cookie">M&M Cookie<br>
+                <input type="radio" name="dessert" value="Espresso Ice Cream">Espresso Ice Cream<br>
+                <input type="radio" name="dessert" value="Fruitcake">Fruitcake<br>
+                <input type="radio" name="dessert" value="Chocolate Cremeux">Chocolate Cremeux<br>
+            </center>
+    
+
+            <br>
+        </fieldset>
+
+        <fieldset class="concrat">
+          <legend>Any message for Sabrina?</legend>
+          <center>
+            <textarea name="message" rows="5" placeholder="Show Sabrina some love!" width="70%"></textarea>
+          </center>
+        </fieldset><br>
+    
+        <div style="text-align:center;" class="buttonsgrp">
+          <input type="reset" value="Reset Form" class="buttons">
+          <input type="submit" value="Submit RSVP" class="buttons">
+        </div>
+      </form>
+    
+      <script>
+        const desserts = [
+            { option: "Chocolate Chip Cookie", description: "Sabrina's signature favorite that will never go out of style." },
+            { option: "M&M Cookies", description: "Perfectly made for a sweet tooth - like Miss Sabrina." },
+            { option: "Espresso Ice Cream", description: "An ice cream that will make you work late, even if you're not a singer..." },
+            { option: "Fruitcake", description: "Is it New Year's yet? Enjoy some fruitcake in the meanwhile!" },
+            { option: "Chocolate Cremeux", description: "It's so romantic in Paris... and so is this cremeux!" }
+        ];
+
+        function populateDessertTable(dessertsData, tableBodyId) {
+            const dessertTableBody = document.querySelector(`#${tableBodyId}`);
+
+            if (!dessertTable) {
+                console.error(`Error: Table body with ID '${tableBodyId}' not found.`);
+                return;
+            }
+
+            for (let i = 0; i < dessertsData.length; i++) {
+                const rowData = dessertsData[i];
+
+                const newRow = document.createElement("tr");
+
+                const dessertOptionCell = document.createElement("td");
+                dessertOptionCell.textContent = rowData.option;
+                newRow.appendChild(dessertOptionCell);
+
+                const dessertDescCell = document.createElement("td");
+                dessertDescCell.textContent = rowData.description;
+                newRow.appendChild(dessertDescCell);
+
+                dessertTableBody.appendChild(newRow);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateDessertTable(desserts, "dessertTable");
+        });
+        
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwN4svnnn_w1GTd8oZ0usqn2x0BKHGnS03VnYnsHfsYxeZ4IBMQKezU5xDb4rFrDLF2XA/exec';
+        const form = document.getElementById('rsvpSatinSkies');
+      
+        form.addEventListener('submit', e => {
+    
+          e.preventDefault();
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+              alert("Reservation successful. See you there, Carpenter! 💋☁️");
+              form.reset();
+            })
+      
+            .catch(error => alert('Error!', error.message));
+      
+        });
+      </script>
+    </div>
+
+</body>
+</html>
