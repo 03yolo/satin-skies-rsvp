@@ -391,21 +391,25 @@
                 return;
             }
 
-            for (let i = 0; i < dessertsData.length; i++) {
-                const rowData = dessertsData[i];
-
-                const newRow = document.createElement("tr");
-
-                const dessertOptionCell = document.createElement("td");
-                dessertOptionCell.textContent = rowData.option;
-                newRow.appendChild(dessertOptionCell);
-
-                const dessertDescCell = document.createElement("td");
-                dessertDescCell.textContent = rowData.description;
-                newRow.appendChild(dessertDescCell);
-
-                dessertTableBody.appendChild(newRow);
+            else {
+                for (let i = 0; i < dessertsData.length; i++) {
+                    const rowData = dessertsData[i];
+    
+                    const newRow = document.createElement("tr");
+    
+                    const dessertOptionCell = document.createElement("td");
+                    dessertOptionCell.textContent = rowData.option;
+                    newRow.appendChild(dessertOptionCell);
+    
+                    const dessertDescCell = document.createElement("td");
+                    dessertDescCell.textContent = rowData.description;
+                    newRow.appendChild(dessertDescCell);
+    
+                    dessertTableBody.appendChild(newRow);
+                }
             }
+
+           
         }
 
         document.addEventListener('DOMContentLoaded', () => {
